@@ -371,7 +371,7 @@ Put on the on login script (with telegram support) please change accordinly with
   }
 # api tracking
   { /do {
-  :local URLamount "$amt";
+  :local URLamount "$iSaleAmt";
   :local URLcomment "ScriptOnLoginFINAL";
   :local URLip [:put [:tostr $address]];
   :local URLusr [$user];
@@ -457,7 +457,7 @@ Put on the on login script (with telegram support) please change accordinly with
 # Random Mac
 :if ($isRandomMacSyncFix=1) do={
   :local cmac $"mac-address";
-  :foreach AU in=[/ip hotspot active find user="$user"] do={
+  :foreach AU in=[/ip hotspot active find user="$username"] do={
     :local amac [/ip hotspot active get $AU mac-address];
     :if ($cmac!=$amac) do={  /ip hotspot active remove [/ip hotspot active find mac-address="$amac"]; }
   }
