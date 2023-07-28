@@ -340,7 +340,8 @@ Put on the on login script (with telegram support) please change accordinly with
 ###replace telegram chat id / group id
 :local iTGrChatID "xxxxxxxxxxxxxx";
 ### hotspot folder for HEX put flash/hotspot for haplite put hotspot only
-:local HSFilePath "hotspot";
+:local HSFilePath "flash/hotspot";
+if ([file find name="hotspot"]!="") do={ set HSFilePath "hotspot" }
 ### enable Random MAC synchronizer
 :local isRandomMacSyncFix 0;
 
